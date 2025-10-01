@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_updates",
+  "info": {
+    "singularName": "project-update",
+    "pluralName": "project-updates",
+    "displayName": "Project Update",
+    "description": "Timeline updates on projects"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["To Do", "In Progress", "Completed"],
+      "default": "To Do"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "project_updates"
+    }
+  }
+}

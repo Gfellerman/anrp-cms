@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "media_mentions",
+  "info": {
+    "singularName": "media-mention",
+    "pluralName": "media-mentions",
+    "displayName": "Media Mention",
+    "description": "External articles or press mentions"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "publication": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "media_mentions"
+    }
+  }
+}

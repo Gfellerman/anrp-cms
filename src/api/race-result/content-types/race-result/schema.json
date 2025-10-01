@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "race_results",
+  "info": {
+    "singularName": "race-result",
+    "pluralName": "race-results",
+    "displayName": "Race Result",
+    "description": "Track performance records"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "event": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "result": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "richtext"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "race_results"
+    }
+  }
+}
