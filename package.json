@@ -1,0 +1,26 @@
+{
+  "name": "anrp-cms",
+  "private": true,
+  "version": "0.1.0",
+  "description": "ANRP Motorsport CMS Backend",
+  "scripts": {
+    "build": "strapi build",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/strapi": "4.25.0",
+    "@strapi/plugin-users-permissions": "4.25.0",
+    "@strapi/plugin-i18n": "4.25.0",
+    "@strapi/plugin-graphql": "4.25.0",
+    "@strapi/plugin-upload": "4.25.0",
+    "@strapi/provider-upload-cloudinary": "4.25.0",
+    "pg": "8.8.0",
+    "better-sqlite3": "8.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=6.0.0"
+  }
+}
