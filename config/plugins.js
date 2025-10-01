@@ -1,8 +1,3 @@
 module.exports = ({ env }) => ({
-  upload: {
-    config: {
-      provider: 'strapi-provider-upload-strapi-cloud',
-      providerOptions: {},
-    },
-  },
+  // Remove upload provider config completely - let Strapi Cloud handle it automatically
 });
