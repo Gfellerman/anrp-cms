@@ -1,3 +1,14 @@
 module.exports = ({ env }) => ({
-  // Remove upload provider config completely - let Strapi Cloud handle it automatically
+  'users-permissions': {
+    config: {
+      jwt: {
+        expiresIn: '7d',
+      },
+    },
+  },
+  upload: {
+    config: {
+      // Strapi Cloud will handle this automatically
+    },
+  },
 });
